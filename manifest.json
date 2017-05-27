@@ -1,0 +1,17 @@
+{
+"manifest_version": 2,
+    "name": "Wente Confirm",
+    "description": "Just confirms that you seriously want to proceed and read an article by Margaret Wente",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

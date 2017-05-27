@@ -1,14 +1,29 @@
+<html>
+<head>
+<title>Test</title>
+</head>
+<body>
+<p class="byline author vcard selectionShareable">
+<a href="/authors/margaret-wente" title="Go to Margaret Wente’s author page">Margaret Wente</a>
+</p>
+</body>
+
+<script>
 var docUrl = window.location.hostname;
-if (docUrl == 'www.theglobeandmail.com'){
+
+if (docUrl == 'https://www.theglobeandmail.com'){
 	var authorEl = document.getElementsByClassName('byline author vcard selectionShareable');
 	var authorElItem = authorEl.item(0);
 	var authorHref = authorElItem.querySelectorAll("a");
+	alert(authorHref.item(0));
 	var authorLinkSplit = authorHref.item(0).getAttribute("href").split("/");
 	var authorName = authorLinkSplit[authorLinkSplit.length-1];
 
 	if (authorName=="margaret-wente"){
 		alert("This article is by Margaret Wente...are you sure you want to proceed?")
 		alert("Are you absolutely positive?")
-		alert("Just to be clear, you are going to proceed to this article by Margaret Wente. Are you certain that you want to do this?")
+		alert("Just to be clear, you are going to proceed to this article by Margaret Wente. Are you certain hat you want to do this?")
 	}
 }
+</script>
+</html>
